@@ -27,7 +27,44 @@ public class AttendanceManager {
             System.out.println("ID      : " + s.getId());
             System.out.println("Name    : " + s.getName());
             System.out.println("Course  : " + s.getCourse());
+            System.out.println("Status  : " + (s.isPresent() ? "Present" : "Absent"));
             System.out.println("------------------------");
         }
+
     }
+    public void searchStudent(int id) {
+
+        for (Student student : students) {
+
+            if (student.getId() == id) {
+
+                System.out.println("\n===== Student Found =====");
+                System.out.println("ID      : " + student.getId());
+                System.out.println("Name    : " + student.getName());
+                System.out.println("Course  : " + student.getCourse());
+                System.out.println("Status  : " + (student.isPresent() ? "Present" : "Absent"));
+
+                return;
+            }
+        }
+
+        System.out.println("Student Not Found!");
+    }
+        public void markAttendance(int id) {
+
+            for (Student student : students) {
+
+                if (student.getId() == id) {
+
+                    student.setPresent(true);
+
+                    System.out.println("Attendance Marked Successfully!");
+
+                    return;
+                }
+            }
+
+            System.out.println("Student Not Found!");
+        }
+
 }

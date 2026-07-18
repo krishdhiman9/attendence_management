@@ -67,10 +67,11 @@ public class Main {
 
                         while (true) {
 
-                            System.out.println("\n========= Dashboard =========");
                             System.out.println("1. Add Student");
                             System.out.println("2. View Students");
-                            System.out.println("3. Logout");
+                            System.out.println("3. Mark Attendance");
+                            System.out.println("4. Search Student");
+                            System.out.println("5. Logout");
 
                             System.out.print("Enter Choice: ");
                             int dashboardChoice = sc.nextInt();
@@ -106,15 +107,31 @@ public class Main {
 
                                 case 3:
 
-                                    System.out.println("Logout Successful!");
+                                    System.out.print("Enter Student ID: ");
+                                    int studentId = sc.nextInt();
+
+                                    manager.markAttendance(studentId);
+
                                     break;
 
+                                case 4:
+
+                                    System.out.print("Enter Student ID: ");
+                                    int searchId = sc.nextInt();
+
+                                    manager.searchStudent(searchId);
+
+                                    break;
+                                case 5:
+
+                                    System.out.println("Logout Successful!");
+                                    break;
                                 default:
 
                                     System.out.println("Invalid Choice!");
                             }
 
-                            if (dashboardChoice == 3) {
+                            if (dashboardChoice == 5) {
                                 break;
                             }
                         }
