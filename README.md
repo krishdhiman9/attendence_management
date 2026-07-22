@@ -63,7 +63,7 @@ git clone https://github.com/krishdhiman9/Attendance_Management_System.git
 
 2. Open the project in **IntelliJ IDEA**.
 
-3. Run the **Main.java** file.
+3. Run src/com/attendance/Main.java.
 
 4. Follow the on-screen menu.
 
