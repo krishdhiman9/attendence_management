@@ -58,7 +58,7 @@ AttendanceManagementSystem
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/attendance-management-system.git
+git clone https://github.com/krishdhiman9/Attendance_Management_System.git
 ```
 
 2. Open the project in **IntelliJ IDEA**.
